@@ -8,9 +8,9 @@ ELK_VERSION="7.0.1"
 apt-get update --quiet
 apt-get install -y unzip git apt-transport-https default-jre --quiet
 
+echo "Java version"
 java -version
-echo "Java Home is"
-echo $JAVA_HOME
+[ -z $JAVA_HOME ] && echo "JAVA_HOME not set" || echo "JAVA_HOME is ${JAVA_HOME}"
 
 # install the Elastic PGP Key and repo
 wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | apt-key add -
