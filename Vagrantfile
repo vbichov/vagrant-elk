@@ -4,10 +4,10 @@
 Vagrant.configure("2") do |config|
 
     # configure VM
-    config.vm.box = "bento/ubuntu-16.04"
+    config.vm.box = "bento/ubuntu-18.04"
 
     # configure provisioning
-    config.vm.provision "shell", path: "bootstrap.sh"
+    config.vm.provision "shell", path: "bootstrap.sh", privileged: true
 
     # configure network ports
     config.vm.network "forwarded_port", host: 9200, guest: 9200 # Elasticsearch
