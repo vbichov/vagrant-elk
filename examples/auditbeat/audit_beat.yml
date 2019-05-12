@@ -21,3 +21,12 @@ output.elasticsearch:
 
 setup.kibana:
   host: "192.168.50.4:5601"
+
+
+# vagrant ssh grafana
+# apt-get install auditbeat
+# vi audit_beat.yml
+# auditbeat setup --dashboards -e
+# auditbeat run -c /root/audit_beat.yml -e
+# go to kibana and see the data
+
