@@ -45,7 +45,7 @@ echo "[*] Done Installing Kibana"
 # install Logstash
 echo "[*] Installing Logstash"
 apt-get install  --quiet -y logstash=1:$ELK_VERSION-1 
-
+apt-get install --quiet -y filebeat
 # # copy over configs
 # cp -R /vagrant/configs/logstash/* /etc/logstash/conf.d/
 # systemctl enable logstash.service
