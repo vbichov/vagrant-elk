@@ -5,7 +5,8 @@ EXPOSED_PORTS = [
     9200, # Elasticsearch
     9300, # Elasticsearch
     5000, # Logtash
-    5601  # Kibana
+    5601, # Kibana
+    3000  # Grafana
   ]
 
 Vagrant.configure("2") do |config|
