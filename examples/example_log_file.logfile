@@ -1,0 +1,12 @@
+2017-03-09 22:32:01,846 - python_logging - INFO - Completed configuring logger()!
+2017-03-09 22:32:01,847 - python_logging.first_class - WARNING - Incrementing number!
+2017-03-09 22:32:01,847 - python_logging.first_class - INFO - Still incrementing number!!
+2017-03-09 22:32:01,847 - python_logging.first_class - WARNING - Incrementing number!
+2017-03-09 22:32:01,847 - python_logging.first_class - INFO - Still incrementing number!!
+2017-03-09 22:32:01,847 - python_logging.first_class - WARNING - Clearing number!
+2017-03-09 22:32:01,847 - python_logging.first_class - INFO - Still clearing number!!
+2017-03-09 22:32:01,848 - python_logging.second_class - WARNING - Enabling system!
+2017-03-09 22:32:01,848 - python_logging.second_class - INFO - Still enabling system!!
+2017-03-09 22:32:01,848 - python_logging.second_class - WARNING - Disabling system!
+2017-03-09 22:32:01,848 - python_logging.second_class - INFO - Still disabling system!!
+
