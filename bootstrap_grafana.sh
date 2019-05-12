@@ -12,9 +12,9 @@ apt-get install -y unzip git ifupdown apt-transport-https --quiet
 curl -s https://packages.grafana.com/gpg.key | sudo apt-key add -
 add-apt-repository "deb https://packages.grafana.com/oss/deb stable main"
 
-# install the elk PGP Key and repo
-curl -s https://artifacts.elastic.co/GPG-KEY-elasticsearch | apt-key add -
-add-apt-repository "deb https://artifacts.elastic.co/packages/7.x/apt stable main" 
+# # install the elk PGP Key and repo
+# curl -s https://artifacts.elastic.co/GPG-KEY-elasticsearch | apt-key add -
+# echo "deb https://artifacts.elastic.co/packages/7.x/apt stable main" | tee -a /etc/apt/sources.list.d/elastic-7.x.list
 
 apt-get update --quiet
 echo "[*] Installing Grafana"

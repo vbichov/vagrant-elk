@@ -19,21 +19,24 @@ Vagrant.configure("2") do |config|
 
     config.vm.define :elk do |node|
         node.vm.box = "bento/ubuntu-18.04"
-        node.vm.hostname = "elk"
         node.vm.network "private_network", ip: "192.168.50.4"
         EXPOSED_PORTS.each do | port|
-          node.vm.network "forwarded_port", guest: port , host: port
+            node.vm.network "forwarded_port", guest: port , host: port
         end
         node.vm.provision "shell", path: "bootstrap_elk.sh", privileged: true
+        node.vm.provision "shell", path: "bootstrap_grafana.sh", privileged: true
+        # node.vm.hostname = "elk"
+
     end
 
-    config.vm.define :grafana do |node|
-        node.vm.box = "bento/ubuntu-18.04"
-        node.vm.hostname = "grafana"
-        node.vm.network "private_network", ip: "192.168.50.5"
-        node.vm.network "forwarded_port", guest: 3000 , host: 3000
-        node.vm.provision "shell", path: "bootstrap_grafana.sh", privileged: true
-    end
+    # config.vm.define :grafana do |node|
+    #     node.vm.box = "bento/ubuntu-18.04"
+    #     node.vm.hostname = "grafana"
+    #     node.vm.provision "shell", path: "bootstrap_grafana.sh", privileged: true
+    #     node.vm.network "private_network", ip: "192.168.50.5"
+    #     node.vm.network "forwarded_port", guest: 3000 , host: 3000
+
+    # end
 
 
 end

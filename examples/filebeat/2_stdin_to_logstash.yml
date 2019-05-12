@@ -2,4 +2,4 @@ filebeat.inputs:
 - type: stdin
 
 output.logstash:
-    hosts: ["192.168.50.4:5044"]
+    hosts: ["127.0.0.1:5044"]

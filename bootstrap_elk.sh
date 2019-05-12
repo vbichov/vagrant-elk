@@ -6,7 +6,7 @@ ELK_VERSION="7.0.1"
 
 # update apt
 apt-get update --quiet
-apt-get install -y unzip apt-get ifupdown git apt-transport-https default-jre --quiet
+apt-get install -y unzip ifupdown git apt-transport-https default-jre --quiet
 
 echo "Java version"
 java -version
