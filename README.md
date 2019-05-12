@@ -1,6 +1,9 @@
 # Vagrant ELK stack
 
-A vagrant based ELK stack (Elasticsearch, Logstash, Kibana).
+2 Hosts installation:
+  - grafana host (with grafana on it)
+  - elk host with elasticsearch, logstash and kibana on it
+
 
 Installation Steps:
 
@@ -8,14 +11,15 @@ Installation Steps:
 vagrant up
 visit URL for kibana - http://127.0.0.1:5601
 Elasticsearch - http://127.0.0.1:9200
+grafana  - http://127.0.0.1:3000
 ```
 
 ## Installed versions 
 
 Contains the following software 
-- Elasticsearch 6.2.4
-- Logstash 6.2.4
-- Kibana 6.2.4 
+- Elasticsearch 7.0.1
+- Logstash 7.0.1
+- Kibana 7.0.1
 
 
 ## Configuration folders
