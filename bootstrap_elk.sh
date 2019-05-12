@@ -28,22 +28,12 @@ cp /vagrant/configs/elasticsearch/elasticsearch.yml /etc/elasticsearch/
 /bin/systemctl enable elasticsearch.service
 /bin/systemctl start elasticsearch.service
 
-# install Logstash
-echo "[*] Installing Logstash"
-apt-get install  --quiet -y logstash=1:$ELK_VERSION-1 
-
-# copy over configs
-cp -R /vagrant/configs/logstash/* /etc/logstash/conf.d/
-systemctl enable logstash.service
-systemctl start logstash.service
-echo "[+] Done Installing Logstash"
-
-
 # Install Kibana
 echo "[*] Installing Kibana"
 apt-get install --quiet -y kibana=$ELK_VERSION 
 
-# copy over configs
+# copy over con
+figs
 cp /vagrant/configs/kibana/kibana.yml /etc/kibana/
 
 /bin/systemctl daemon-reload
@@ -51,6 +41,18 @@ cp /vagrant/configs/kibana/kibana.yml /etc/kibana/
 systemctl start kibana.service
 echo "[*] Done Installing Kibana"
 
+
+# install Logstash
+echo "[*] Installing Logstash"
+apt-get install  --quiet -y logstash=1:$ELK_VERSION-1 
+
+# # copy over configs
+# cp -R /vagrant/configs/logstash/* /etc/logstash/conf.d/
+# systemctl enable logstash.service
+# systemctl start logstash.service
+# echo "[+] Done Installing Logstash"
+
+
 # Smoke tests
 netstat -pant
-curl -XGET http://localhost:9200
+curl -XGET -s http://localhost:9200
