@@ -1,0 +1,12 @@
+filebeat.inputs:
+- type: stdin
+
+
+output.console:
+  pretty: true
+
+
+# vagrant ssh grafana
+# sudo -i
+# apt-get install filebeat
+# filebeat run -c <your yml file> -e
