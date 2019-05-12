@@ -1,0 +1,10 @@
+
+
+filebeat.inputs:
+ - type: log
+   paths:
+   - /var/log/grafana/grafana.log
+
+output.logstash:
+  hosts:
+   - "192.168.50.4:5044"
