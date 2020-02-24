@@ -2,7 +2,7 @@
 
 export DEBIAN_FRONTEND="noninteractive"
 
-GRAFANA_VERSION="6.1.6"
+GRAFANA_VERSION="6.6.2"
 
 # update apt
 apt-get update --quiet
