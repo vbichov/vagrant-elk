@@ -2,7 +2,7 @@
 
 export DEBIAN_FRONTEND="noninteractive"
 
-ELK_VERSION="7.0.1"
+ELK_VERSION="7.6.0"
 
 # update apt
 apt-get update --quiet
@@ -32,8 +32,7 @@ cp /vagrant/configs/elasticsearch/elasticsearch.yml /etc/elasticsearch/
 echo "[*] Installing Kibana"
 apt-get install --quiet -y kibana=$ELK_VERSION 
 
-# copy over con
-figs
+# copy over configs
 cp /vagrant/configs/kibana/kibana.yml /etc/kibana/
 
 /bin/systemctl daemon-reload

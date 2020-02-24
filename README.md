@@ -17,9 +17,9 @@ grafana  - http://127.0.0.1:3000
 ## Installed versions 
 
 Contains the following software 
-- Elasticsearch 7.0.1
-- Logstash 7.0.1
-- Kibana 7.0.1
+- Elasticsearch 7.6.0
+- Logstash 7.6.0
+- Kibana 7.6.0
 
 
 ## Configuration folders
