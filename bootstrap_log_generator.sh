@@ -1,19 +1,23 @@
 #!/bin/bash
 
 
-mkdir -p /etc/log_generator
-pushd  /etc/log_generator
-git clone git@github.com:vbichov/log_generator.git
+
+pushd  /etc
+git clone https://github.com/vbichov/log_generator.git
 
 
-cat <<EOF >> /usr/lib/systemd/system/log_generator.service
+mkdir -p /usr/lib/systemd/system/
+
+cat << EOF > /usr/lib/systemd/system/log_generator.service
 [Unit]
 Description=Python log generator service
 
 [Service]
 # Command to execute when the service is started
-ExecStart=/usr/bin/python3 /etc/log_generator/gerator.py
+ExecStart=/usr/bin/python3 generator.py
+Restart=on-failure
+WorkingDirectory= /etc/log_generator
 EOF
 
 systemctl daemon-reload
-systmctl start log_generator.service
+systemctl start log_generator.service

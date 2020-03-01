@@ -1,9 +1,7 @@
 # Vagrant ELK stack
 
 2 Hosts installation:
-  - grafana host (with grafana on it)
-  - elk host with elasticsearch, logstash and kibana on it
-
+ - host with ELK and grafana in it + dummy log generating app
 
 Installation Steps:
 
@@ -13,6 +11,8 @@ visit URL for kibana - http://127.0.0.1:5601
 Elasticsearch - http://127.0.0.1:9200
 grafana  - http://127.0.0.1:3000
 ```
+
+open Kibana, load sample data and asses the tools capabilites
 
 ## Installed versions 
 
