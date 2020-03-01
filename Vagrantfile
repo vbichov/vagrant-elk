@@ -26,6 +26,7 @@ Vagrant.configure("2") do |config|
         end
         node.vm.provision "shell", path: "bootstrap_elk.sh", privileged: true
         node.vm.provision "shell", path: "bootstrap_grafana.sh", privileged: true
+        node.vm.provision "shell", path: "bootstrap_log_generator.sh", privileged: true
         # node.vm.hostname = "elk"
 
     end
